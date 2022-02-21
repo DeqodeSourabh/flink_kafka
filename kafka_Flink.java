@@ -30,7 +30,7 @@ public class flink_kafka_reciver_sender {
 	public static class StringCapitalizer implements MapFunction<String, String> {
 	    @Override
 	    public String map(String data) throws Exception {
-	    	data= data.toUpperCase();
+	    	String data= data.toUpperCase();
             String sql = "insert into  fetch_blocks values(data)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.execute(sql);
