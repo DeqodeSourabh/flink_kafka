@@ -15,7 +15,7 @@ import java.sql.Statement;
 import java.sql.*;
 public class flink_kafka_reciver_sender {
 	Class.forName("com.mysql.jdbc.Driver");
-	static String myUrl = "jdbc:mysql://localhost/fetch_blocks";
+	static String myUrl = "jdbc:mysql://localhost/fetch_blocks_DB";
 	static Connection conn = DriverManager.getConnection(myUrl, "root", "");
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
@@ -30,8 +30,8 @@ public class flink_kafka_reciver_sender {
 	public static class StringCapitalizer implements MapFunction<String, String> {
 	    @Override
 	    public String map(String data) throws Exception {
-	    	String data= data.toUpperCase();
-            String sql = "insert into  fetch_blocks values(data)";
+	    	String data1= data.toUpperCase();
+            String sql = "insert into  fetch_blocks values(data1)";
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.execute(sql);
             System.out.println(data.toUpperCase());
