@@ -1,6 +1,6 @@
 WORK till now---
-1)Distributed the code and Apply parallel
-1)Deploy the task in Ray clusters
+1)Distributed the code and Apply parallel<br />
+1)Deploy the task in Ray clusters<br />
 2)Solve the Memory Leakage issues
 3)Learn The Docker and Docker-Compose
 4)Learn Kubernetes with Kind and Deploy the task in it
